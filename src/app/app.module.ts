@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { IndexComponent } from './page/index/index.component';
 import { CartaComponent } from './page/carta/carta.component';
 import { FinalComponent } from './page/final/final.component';
+import { CloseComponent } from './page/close/close.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IndexComponent,
     CartaComponent,
-    FinalComponent
+    FinalComponent,
+    CloseComponent
   ],
   imports: [
     BrowserModule,
