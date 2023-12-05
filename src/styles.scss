@@ -1,4 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+$color-primary : #0b1522;
+$color-secundary : #f20044;
+$color-rojo : #A50023;
+
+@mixin flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@include area-150px {
+    width: 150px;
+    height: 150px;
+}
+
+@include shadow () {
+    border-radius: 50%;
+    box-shadow: -20px 20px 800px $color-rojo ;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,16 +26,17 @@
 
 body {
     min-height: 100vh;
-    background-color: #0b1522;
+    background-color: $color-primary;
     font-family: 'Lovers Quarrel', cursive;
     font-size: 40px;
     border-radius: 20px;
 
 }
+
 .btn {
-    color: #f20044;
+    color: $color-primary ;
     background-color: transparent;
-    border: #f20044 solid 3px;
+    border: $color-primary solid 3px;
     border-radius: 10px;
     padding: 10px 20px;
     font-size: 50px;
@@ -24,7 +45,53 @@ body {
     font-family: 'Lovers Quarrel', cursive;
 
     &:hover {
-        background-color: #f20044;
-        color: #0b1522;
+        background-color: $color-primary ;
+        color: $color-primary;
     }
+}
+
+.container {
+    @include flex();
+    max-width: 90%;
+    width: 1200px;
+    height: 100vh;
+    margin: auto;
+    gap: 20px;
+
+}
+
+.text {
+    margin-top: 50px;
+    height: 60%;
+    color: $color-primary ;
+    display: flex;
+    flex-direction: column;
+    border: $color-primary solid 2px;
+    padding: 40px;
+    border-radius: 20px;
+    gap: 20px;
+
+
+}
+
+.scrollable {
+    height: 99%;
+    overflow: auto;
+}
+
+.scrollable::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+    overflow: auto;
+    background-color: $color-primary ;
+    border-radius: 4px;
+}
+
+
+img {
+    width: 300px;
+    margin: 0 auto;
+    display: block;
 }

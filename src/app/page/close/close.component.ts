@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { IpcRenderer } from "electron";
 @Component({
   selector: 'app-close',
-  templateUrl: './close.component.html',
-  styleUrls: ['./close.component.scss']
+  templateUrl: './close.component.html'
 })
 export class CloseComponent {
   private ipc: IpcRenderer | any;

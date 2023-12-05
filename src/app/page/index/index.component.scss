@@ -1,44 +1,34 @@
 .heart {
+    @include area-150px;
     position: relative;
-    width: 150px;
-    height: 150px;
-    background-color: #A50023;
+    background-color: $color-rojo ;
     transform: rotate(45deg);
-    box-shadow: -20px 20px 150px #f20044;
+    box-shadow: -20px 20px 150px $color-secundary;
     animation: palpitar .5s linear infinite alternate;
 
     &::before {
+        @include area-150px;
+        @include shadow;
         content: '';
         position: absolute;
-        height: 150px;
-        width: 150px;
-        background-color: #A50023;
+        background-color: $color-rojo ;
         right: 50%;
-        border-radius: 50%;
-        box-shadow: -20px 20px 800px #A50023;
-        /* Ajusta los valores de la sombra */
     }
 
     &::after {
+        @include area-150px;
+        @include shadow;
         content: '';
         position: absolute;
-        height: 150px;
-        width: 150px;
-        background-color: #A50023;
+        background-color: $color-rojo ;
         top: -50%;
-        border-radius: 50%;
-        box-shadow: -20px 20px 800px #A50023;
-        /* Ajusta los valores de la sombra */
     }
 }
 
 .container {
+    @include flex();
     width: 100%;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     gap: 80px;
 }
 
@@ -56,4 +46,3 @@
     }
 
 }
-
