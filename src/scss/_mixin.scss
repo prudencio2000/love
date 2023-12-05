@@ -1,0 +1,15 @@
+@mixin flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@mixin area-150px {
+    width: 150px;
+    height: 150px;
+}
+
+@mixin shadow {
+    border-radius: 50%;
+    box-shadow: -20px 20px 800px $color-rojo;
+}

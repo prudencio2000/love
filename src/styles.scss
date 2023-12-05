@@ -1,29 +1,11 @@
-$color-primary : #0b1522;
-$color-secundary : #f20044;
-$color-rojo : #A50023;
+@import 'scss/variables';
+@import 'scss/mixin';
 
-@mixin flex {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-@include area-150px {
-    width: 150px;
-    height: 150px;
-}
-
-@include shadow () {
-    border-radius: 50%;
-    box-shadow: -20px 20px 800px $color-rojo ;
-}
 
 * {
     margin: 0;
     padding: 0;
 }
-
 body {
     min-height: 100vh;
     background-color: $color-primary;
@@ -34,9 +16,9 @@ body {
 }
 
 .btn {
-    color: $color-primary ;
+    color: $color-secundary ;
     background-color: transparent;
-    border: $color-primary solid 3px;
+    border: $color-secundary solid 3px;
     border-radius: 10px;
     padding: 10px 20px;
     font-size: 50px;
@@ -45,7 +27,7 @@ body {
     font-family: 'Lovers Quarrel', cursive;
 
     &:hover {
-        background-color: $color-primary ;
+        background-color: $color-secundary ;
         color: $color-primary;
     }
 }
@@ -63,10 +45,10 @@ body {
 .text {
     margin-top: 50px;
     height: 60%;
-    color: $color-primary ;
+    color: $color-secundary ;
     display: flex;
     flex-direction: column;
-    border: $color-primary solid 2px;
+    border: $color-secundary solid 2px;
     padding: 40px;
     border-radius: 20px;
     gap: 20px;
@@ -85,7 +67,7 @@ body {
 
 .scrollable::-webkit-scrollbar-thumb {
     overflow: auto;
-    background-color: $color-primary ;
+    background-color: $color-secundary ;
     border-radius: 4px;
 }
 
