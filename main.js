@@ -20,7 +20,7 @@ createWindow = () => {
     appWin.loadURL(`file://${__dirname}/dist/index.html`);
 
     appWin.setMenu(null);
-
+    appWin.setFullScreen(true);
     appWin.webContents.openDevTools();
 
     appWin.on("closed", () => {

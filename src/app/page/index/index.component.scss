@@ -28,6 +28,15 @@
     }
 }
 
+.contenido {
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 2px $color-secundary, 0 0 1em  $color-rojo, 0 0 0.2em  $color-rojo;
+    h1,h2{
+        font-weight: normal
+    }
+}
+
 .container {
     @include flex();
     width: 100%;

@@ -1,13 +1,19 @@
 import { Component } from '@angular/core';
 import { IpcRenderer } from "electron";
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-close',
   templateUrl: './close.component.html'
 })
 export class CloseComponent {
   private ipc: IpcRenderer | any;
+  isInicio = false ;
+  constructor(private location: Location) {
+    const rutaRelativa: string = this.location.path();
+    if (rutaRelativa === ""){
+      this.isInicio = true
+    }
 
-  constructor() {
     if (window.require) {
       try {
         this.ipc = window.require("electron").ipcRenderer;
